@@ -1,0 +1,21 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --button-text-color: #606266;
+  --btn-active-color: #f0f2f5;
+  --card-bg-color:#fff;
+  --card-border-color: #e4e7ed;
+  --transition-duration: 0.3s;
+  --button-hover-bg-color: #f5f7fa;
+}
+
+
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --button-text-color: #cfd3dc;
+  --btn-active-color: #303030;
+  --card-bg-color:#1d1e1f;
+  --card-border-color: #414243;
+  --button-hover-bg-color: rgba(245, 247, 250, 0.22);
+}

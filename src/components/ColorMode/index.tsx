@@ -1,10 +1,8 @@
 'use client'
 import { useState } from 'react';
 import useColorMode from '@/src/hooks/useColorMode';
-import light_icon from './icons/light.svg'
-import dark_icon from './icons/dark.svg'
-import './index.scss'
-
+import light_icon from '@/src/assets/images/icons/light.svg'
+import dark_icon from '@/src/assets/images/icons/dark.svg'
 
 function ColorMode(){
   const [colorMode, toggleMode] = useColorMode()
@@ -13,10 +11,9 @@ function ColorMode(){
   const enableTransitions = () =>
     'startViewTransition' in document &&
     window.matchMedia('(prefers-reduced-motion: no-preference)').matches
-  
-  
 
-  async function toggleTheme({ clientX: x, clientY: y }: MouseEvent){
+  async function toggleTheme(event: React.MouseEvent){
+    const { clientX: x, clientY: y } = event;
     const isDark = colorMode === 'dark';
     console.log(enableTransitions())
     if(!enableTransitions()) return toggleMode()
@@ -43,8 +40,8 @@ function ColorMode(){
   }
 
   return (
-    <div onClick={toggleTheme}>
-      <img className='h-5 w-5 select-none' src={colorMode === 'light' ? light_icon.src : dark_icon.src} />
+    <div className='w-32 h-32 flex justify-center items-center rounded-half cursor-pointer hover:bg-btn_hover_bg' onClick={toggleTheme}>
+      <img className='w-20 h-20 select-none' src={colorMode === 'light' ? light_icon.src : dark_icon.src} />
     </div>
   )
 }

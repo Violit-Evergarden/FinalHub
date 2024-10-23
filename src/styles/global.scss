@@ -1,16 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --transition-duration: 0.3s;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
-[data-theme="dark"] {
-  --background-color: #000000;
-  --text-color: #ffffff;
+::view-transition-old(root),
+[data-theme="dark"]::view-transition-new(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root),
+[data-theme="dark"]::view-transition-old(root) {
+  z-index: 9999;
 }
 
 body {
