@@ -7,6 +7,13 @@
   --card-border-color: #e4e7ed;
   --transition-duration: 0.3s;
   --button-hover-bg-color: #f5f7fa;
+  --tip-bg-green: #f0f9eb;
+  --tip-border-green: #e1f3d8;
+  --tip-text-green: #67c23a;
+  --tip-bg-info: #f4f4f5;
+  --tip-border-info: #e9e9eb;
+  --tip-text-info: #909399;
+  --card-shadow: '0px 0px 12px #0000001f'
 }
 
 
@@ -18,4 +25,11 @@
   --card-bg-color:#1d1e1f;
   --card-border-color: #414243;
   --button-hover-bg-color: rgba(245, 247, 250, 0.22);
+  --tip-bg-green: #1c2518;
+  --tip-border-green: #25371c;
+  --tip-text-green: #67c23a;
+  --tip-bg-info: #202121;
+  --tip-border-info: #2d2d2f;
+  --tip-text-info: #909399;
+  --card-shadow: '0px 16px 48px 16px #00000014, 0px 12px 32px #0000001f, 0px 8px 16px -8px #00000029'
 }
